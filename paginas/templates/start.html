@@ -1,0 +1,27 @@
+{% extends "Base.html" %}
+
+{% block conteudo %}
+    <h1>Ellooo</h1>
+    <p>WPNZ my best daddd :3</p>
+    <p>My name is {{name}}</p>
+    <p>My age is {{age}}</p>
+    <p>And my height is {{height}}</p>
+    <p>Dad: [WPNZ :3], Brother: [Puzzles :3]</p>
+    <ul>
+    
+        {% for item in Information %}
+        <li>{{item}}</li> 
+        {% endfor %}
+
+        <h2>My Hobbies</h2>
+        {% for H in Hobbies %}
+        <li>{{H}}</li>
+        {% endfor %}
+
+        <h2>My Home</h2>
+        {% for C in City %}
+        <li>{{C}}</li>
+        {% endfor %}
+    </ul>
+{% endblock %}
+</html>

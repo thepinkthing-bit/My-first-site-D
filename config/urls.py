@@ -20,7 +20,7 @@ from paginas import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.Início),
-    path('About/', views.Sobre),
-    path('Contact/', views.Contato),
+    path('', views.Start),
+    path('About/', views.About),
+    path('Contact/', views.Contact),
 ]

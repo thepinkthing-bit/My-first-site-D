@@ -2,28 +2,20 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
-def início (request):
+def Start (request):
     dados = {
         "name": "The Pink Thing",
         "age": "20 years",
         "height": "1.67",
-        "Information": ["Mr. WPNZ", "Mr. Puzzles"]
+        "Information": ["Mr. WPNZ", "Mr. Puzzles"],
+        "Hobbies": ["Heading books", "spending time with my best dad <3"],
+        "City": ["The Big Bad's Lair"],
     }
-    return render(request, "inicio.html", dados)
+    return render(request, "start.html", dados)
 
 
-def sobre (request):
-    return HttpResponse("<h1>About me</h1>"
-                        "<p>My name is The Pink Thing!! :D </p>"
-                        "<a href='/'>Initiation</a> | "
-                        "<a href='/About/'>About</a> | "
-                        "<a href='/Contact/'>Contact</a>")
+def About (request):
+    return render(request, "about.html")
 
-def contato (request):
-    return HttpResponse("<h1>Contact</h1>"
-                        "You can find me on my e-mail: barbosasamara680@gmail.com</p>"
-                        "My phone number is: (81) 9 8415-1287</p>"
-                        "My Instagram: @misuki_.sam_</p>"
-                        "<a href='/'>initiation</a> | "
-                        "<a href='/About/'>About</a> | "
-                        "<a href='/Contact/'>Contact</a>")
+def Contact (request):
+    return render(request, "contact.html")
