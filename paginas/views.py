@@ -2,6 +2,8 @@ from django.shortcuts import render
 
 from django.http import HttpResponse
 
+from .models import Movie
+
 def Start (request):
     dados = {
         "name": "The Pink Thing",
@@ -19,3 +21,9 @@ def About (request):
 
 def Contact (request):
     return render(request, "contact.html")
+
+def Movies (request):
+    projects = {
+            "projects": Movie.objects.all(),
+    }
+    return render(request, "paginas/templates/projects.html", projects)

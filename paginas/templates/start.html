@@ -10,17 +10,17 @@
     <ul>
     
         {% for item in Information %}
-        <li>{{item}}</li> 
+        <li class="card2"> {{item}}</li> 
         {% endfor %}
 
         <h2>My Hobbies</h2>
         {% for H in Hobbies %}
-        <li>{{H}}</li>
+        <li class="card2">{{H}}</li>
         {% endfor %}
 
         <h2>My Home</h2>
         {% for C in City %}
-        <li>{{C}}</li>
+        <li class="card2">{{C}}</li>
         {% endfor %}
     </ul>
 {% endblock %}

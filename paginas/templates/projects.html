@@ -1,0 +1,14 @@
+{% extends "Base.html" %}
+
+{% block conteudo %}
+    <h2> Projects </h2>
+
+    <ul>
+        {%for item in projects%}
+        <li class="card2">
+            <strong>{{item}}</strong>
+        </li>
+        {%endfor%}
+    </ul>
+{% endblock %}
+</html>

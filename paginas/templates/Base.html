@@ -1,17 +1,21 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My first pagee :3</title>
+    <link rel= "stylesheet" href = "{% static 'css\style.css' %}">
 </head>
 <body>
     <header>
         <h1>My first pagee :3</h1>
         <nav>
-            <a href="/">Start</a> |
-            <a href="/About">About</a> |
-            <a href="/Contact">Contact</a>
+            <a class="card" href="/">Start</a>
+            <a class="card" href="/About">About</a>
+            <a class="card" href="/Contact">Contact</a>
+            <a class="card" href="/Projects">Projects</a> 
+            <p>Enjoy my website >:D</p>
         </nav>
     </header>
     <main>
