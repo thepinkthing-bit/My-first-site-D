@@ -3,10 +3,14 @@
 {% block conteudo %}
     <h2> Projects </h2>
 
+    <a href="/New_Movie/">+ Novo projeto</a>
     <ul>
+        <h2>Meus projetos</h2>
         {%for item in projects%}
         <li class="card2">
-            <strong>{{item}}</strong>
+            <strong>{{item.Título}}</strong>
+            ({{ item.Ano }})<br>
+             {{ item.Genêro }} | {{ item.Categoria }}
         </li>
         {%endfor%}
     </ul>

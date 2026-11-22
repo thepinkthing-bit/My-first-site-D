@@ -1,8 +1,8 @@
-from django.shortcuts import render
-
+from django.shortcuts import redirect, render
 from django.http import HttpResponse
-
-from .models import Movie
+from .models import Movie, Category
+from collections import defaultdict
+from paginas.forms import MovieForm, CategoryForm
 
 def Start (request):
     dados = {
@@ -26,4 +26,33 @@ def Movies (request):
     projects = {
             "projects": Movie.objects.all(),
     }
-    return render(request, "paginas/templates/projects.html", projects)
+    return render(request, "projects.html", projects)
+
+def Categories (request):
+    Context = {
+                "Categories": Movie.objects.select_related("Categoria").order_by("Categoria", "Título")
+        }
+    return render(request, "Categories.html", Context)
+
+def New_Movie(request):
+    if request.method == "POST":
+        form = MovieForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("/New Movie/")
+    else:
+        form = MovieForm()
+    return render(request, "New_Movie.html",
+                  {"form": form})
+
+def New_Categories(request):
+    if request.method == "POST":
+        form = MovieForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect("/New Categories/")
+    else:
+        form = MovieForm()
+    return render(request, "New_Categories.html",
+                  {"form": form})
+                                  
