@@ -24,4 +24,7 @@ urlpatterns = [
     path('About/', views.About),
     path('Contact/', views.Contact),
     path('Projects/', views.Movies),
+    path('Categories/', views.Categories),
+    path('New_Movie/', views.New_Movie),
+    path('New_Categories/', views.New_Categories),
 ]
