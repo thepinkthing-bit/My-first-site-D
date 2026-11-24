@@ -1,0 +1,19 @@
+{% extends "Base.html" %}
+
+{% block conteudo %}
+<h1 class="Titulo">{{ movie.Título }}</h1>
+<p class="Ano">Ano: {{ movie.Ano }}</p>
+<p class="Estudio">Estúdio: {{ movie.Estúdio }}</p>
+<p class="Nota">Nota: {{ movie.Nota }}</p>
+<p class="Genêro">Genêro: {{ movie.Genêro }}</p>
+<p class="Categoria">Categoria: {{ movie.Categoria|default:"Sem categoria" }}</p>
+
+<h2>Editar</h2>
+<a href="/Movies/{{ Movies.id }}/Edit/">Edit</a>
+<a href="{% url 'Delete_Project' movie.id %}">Delete</a>
+<form method="post">
+  {% csrf_token %}
+  {{ form.as_p }}
+  <button type="submit">Salvar</button>
+</form>
+{% endblock %}

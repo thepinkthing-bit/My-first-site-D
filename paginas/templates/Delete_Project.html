@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+{% block conteudo %}
+<h1>Excluir projeto</h1>
+<p>Are you sure bro? 3: 
+    <strong>{{ projeto.nome }}</strong>?</p>
+<form method="post">
+    {% csrf_token %}
+    <button type="submit">Yes, Delete UMU</button>
+    <a href="/projects/{{ Projects.id }}/">Cancel :C</a>
+</form>
+{% endblock %}
