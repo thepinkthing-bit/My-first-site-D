@@ -9,9 +9,8 @@
             <strong>{{item.Título}}</strong>
             ({{ item.Ano }})<br>
              {{ item.Genêro }} | {{ item.Categoria }}
-             <a href="{% url 'Delete_Project' item.id %}">Excluir</a>
+             <a href="{% url 'Delete_Project' item.id %}">Delete</a>
         </li>
         {%endfor%}
     </ul>
 {% endblock %}
-</html>

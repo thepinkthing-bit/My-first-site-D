@@ -3,7 +3,6 @@ from django.http import HttpResponse
 from .models import Movie, Category
 from collections import defaultdict
 from paginas.forms import MovieForm, CategoryForm
-from .forms import MovieForm
 
 def Start (request):
     dados = {

@@ -3,3 +3,4 @@ __pycache__/
 db.sqlite3
 .env
 *.pyc
+meu_site_db
