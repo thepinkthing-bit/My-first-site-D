@@ -41,3 +41,11 @@
         padding: 10px;
         margin-bottom: 5px;
       }
+      .card2 {
+        list-style: none;
+        background-color:rgb(146, 113, 146);
+        border: 5px solid, rgb(68, 42, 60);
+        border-radius: 10px;
+        padding: 10px;
+        margin-bottom: 5px;
+      }

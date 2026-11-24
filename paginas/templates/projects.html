@@ -2,11 +2,14 @@
 
 {% block conteudo %}
     <h2> Projects </h2>
-
     <ul>
+        <h2>Meus projetos</h2>
         {%for item in projects%}
         <li class="card2">
-            <strong>{{item}}</strong>
+            <strong>{{item.Título}}</strong>
+            ({{ item.Ano }})<br>
+             {{ item.Genêro }} | {{ item.Categoria }}
+             <a href="{% url 'Delete_Project' item.id %}">Excluir</a>
         </li>
         {%endfor%}
     </ul>
